@@ -11,7 +11,7 @@ except FileNotFoundError:
 else:
     file_path = "data/words_to_learn.csv"
 finally:
-    with open(file_path) as data_file:
+    with open(file=file_path, encoding="utf-8") as data_file:
         data = pandas.read_csv(data_file)
         data_dict = data.to_dict()
         print(data_dict)
