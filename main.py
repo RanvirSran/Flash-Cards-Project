@@ -2,7 +2,6 @@ import random
 from tkinter import *
 import pandas
 
-exists = False
 item_index = None
 
 try:
@@ -11,7 +10,6 @@ except FileNotFoundError:
     file_path = "data/french_words.csv"
 else:
     file_path = "data/words_to_learn.csv"
-    exists = True
 finally:
     with open(file_path) as data_file:
         data = pandas.read_csv(data_file)
